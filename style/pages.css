@@ -1,0 +1,251 @@
+/*var path = document.querySelector('path');var length = path.getTotalLength(); 获取路径的长度*/
+body{
+    background:#090b44; /* Old browsers */
+    background:-moz-radial-gradient(center, ellipse cover, #090b44 0%, #00001c 100%); /* FF3.6+ */
+    background:-webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#090b44), color-stop(100%,#00001c)); /* Chrome,Safari4+ */
+    background:-webkit-radial-gradient(center, ellipse cover, #090b44 0%,#00001c 100%); /* Chrome10+,Safari5.1+ */
+    background:-o-radial-gradient(center, ellipse cover, #090b44 0%,#00001c 100%); /* Opera 12+ */
+    background:-ms-radial-gradient(center, ellipse cover, #090b44 0%,#00001c 100%); /* IE10+ */
+    background:radial-gradient(ellipse at center, #090b44 0%,#00001c 100%); /* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#090b44', endColorstr='#00001c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    padding:0;
+    text-align:center;
+    font-family:'open sans';
+    position:relative;
+    margin:0;
+    height:100%;
+    padding-bottom:50px;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+a{text-decoration:none;}
+canvas{display:block;width:100%;height:100%;top:0;left:0;position:fixed;}
+canvas.flare{opacity:0.5;}
+
+.clearfix:after{display:block; height:0px; content:'.'; visibility:hidden; clear:both;}
+ul,li,h1,h2,h3,h4,h5,h6,dl,dt,dd,ol,label,form,p,header,nav,footer,aside,section{display:block;}
+*{
+    margin:0;
+    padding:0;}
+h2{
+    margin: 40px;
+    font: 30px simsun;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+}
+.box{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+    text-align: center;
+}
+.box div{
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.left{
+    float: left;
+    width: 200px;
+    height: 300px;
+    background: rgba(255, 255, 255, 1);
+    position: relative;
+    box-shadow: inset 0 0 0 4px #2c3e50;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 5%;
+}
+img{
+   width: 170px;height: 180px
+}
+h3{
+    font-size: 33pt;
+    color: #042757;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.one,.two/*:hover*/{
+    background:rgba(255, 255, 255, 0);
+    margin-bottom: 40px;
+}
+.one h3,.one span,.two h3,.two span{color: #FFFFFF; }
+.box svg{ display: block; position: absolute; left: 0; top: 0;}
+.box svg line {
+    stroke-width: 3;
+    stroke: #ECF0F1;
+    fill: none;
+    -webkit-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
+    -ms-transition: all .6s ease-in-out;
+}
+.one svg line.top,
+.one  svg line.bottom {
+    -ms-stroke-dasharray: 430 230;
+    stroke-dasharray: 350 220;
+}
+.one  svg line.left,
+.one  svg line.right {
+    -ms-stroke-dasharray: 430 340;
+    stroke-dasharray: 430 340;
+}
+/*第一种*/
+.one:hover svg line.top{ transform: translateX(-550px); -ms-transform: translateX(-550px);}
+.one:hover svg line.bottom{ transform: translateX(400px);  -ms-transform: translateX(400px);}
+.one:hover svg line.left{ transform: translateY(600px); -ms-transform: translateY(600px);}
+.one:hover svg line.right { transform: translateY(-600px); -ms-transform: translateY(-600px);}
+/*第二种*/
+.two svg line.top,.two svg line.bottom{ stroke-dashoffset: 0; stroke-dasharray:200;}
+.two svg line.left,.two svg line.left { stroke-dashoffset: 0; stroke-dasharray:300;}
+.two:hover svg line.top,.two:hover svg line.bottom{ stroke-dashoffset: 200;}
+.two:hover svg line.fight,.two:hover svg line.right { stroke-dashoffset: 300;}
+/*第三种*/
+.three{ background: rgba(255,255,255,1);}
+.three svg line.top,
+.three svg line.bottom {
+    stroke-dasharray: 230 340;
+}
+.three svg line.left,
+.three svg line.right{
+    stroke-dasharray: 430 340;
+}
+.three{	-webkit-transition: background 0.4s 0.5s;
+    transition: background 0.4s 0.5s;}
+.three:hover{
+    background: rgba(255, 255, 255, 0);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.three h3,
+.three span {
+    -webkit-transition: color 0.4s 0.5s;
+    transition: color 0.4s 0.5s;
+}
+
+.three:hover h3,
+.three:hover span {
+    color: #fff;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.three:hover svg line.top{ transform: translateX(-400px);}
+.three:hover svg line.bottom{ transform: translateX(400px);}
+.three:hover svg line.left{ transform: translateY(600px);}
+.three:hover svg line.right { transform: translateY(-600px);}
+/*第四种*/
+.four{ box-shadow: inset 0 0 0 10px #2c3e50;}
+.four svg line {
+    stroke-width: 10;
+
+}
+.four svg line.top,
+.four svg line.bottom {
+    stroke-dasharray: 330 240;
+}
+.four svg line.left,
+.four svg line.right {
+    stroke-dasharray: 430 340;
+}
+.four{	-webkit-transition: background 0.4s 0.5s;
+    transition: background 0.4s 0.5s;}
+.four:hover{
+    background: rgba(255, 255, 255, 0);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.four h3,
+.four span {
+    -webkit-transition: color 0.4s 0.5s;
+    transition: color 0.4s 0.5s;
+}
+
+.four:hover h3,
+.four:hover span {
+    color: #fe6f83;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.four:hover svg line{ stroke: #fe6f83;}
+.four:hover svg line.top{ transform: translateX(-600px);}
+.four:hover svg line.bottom{ transform: translateX(600px);}
+.four:hover svg line.left{ transform: translateY(800px);}
+.four:hover svg line.right { transform: translateY(-800px);}
+/*第5种*/
+.five{ background: rgba(0,0,0,0);box-shadow: none;}
+.five h3,
+.five span {
+    color: #fff;
+}
+.five svg line.top,
+.five svg line.bottom {
+    stroke-dasharray: 330 240;
+}
+.five svg line.left,
+.five svg line.right{
+    stroke-dasharray: 430 340;
+}
+.five{	-webkit-transition: background 0.4s 0.5s;
+    transition: background 0.4s 0.5s;}
+.five:hover{
+    background: rgba(0, 0, 0, .6);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.five:hover svg line{ stroke-width:10 ;}
+.five:hover svg line.top{ transform: translateX(-100px);}
+.five:hover svg line.bottom{ transform: translateX(100px);}
+.five:hover svg line.left{ transform: translateY(150px);}
+.five:hover svg line.right { transform: translateY(-150px);}
+/*第6种*/
+.six{ background: rgba(0,0,0,0.4);box-shadow: none;}
+.six h3,
+.six span {
+    color: #fff;
+    transform: scale(0.9);
+    transition: all .5s;
+    /*-webkit-backface-visibility: hidden;
+    backface-visibility: hidden;*/
+}
+.six svg line{
+    stroke-width:40 ;
+}
+.six svg line.top,
+.six svg line.bottom {
+    stroke-dasharray: 300;
+}
+.six svg line.left,
+.six svg line.right {
+    stroke-dasharray: 400;
+}
+.six:hover h3,
+.six:hover span {
+    transform: scale(1);
+}
+.six:hover svg line{ stroke-width:0 ; }
+.six:hover svg line.top{ transform: translateX(-300px);}
+.six:hover svg line.bottom{ transform: translateX(300px);}
+.six:hover svg line.left{ transform: translateY(400px);}
+.six:hover svg line.right { transform: translateY(-400px);}
+
+/*.outer{width:300px; height:450px;}*/
+.left .inner{width:180px; height:160px; background:rgba(242,156, 177, .3);
+    color: #FFFFFF;font-family:"微软雅黑"; }
+
+.wrap{ width: 60px; height: 65px; position: absolute; left: 103%; top:93%; }
+.icon_menu{width:65px;height:65px;position:absolute;bottom:2px;right:2px;z-index:10;cursor:pointer;}
+.icon_menu span{diplay:none;}
+.btn{width:52px;height:57px;background:url(../img/bg1-06-01.png) no-repeat -78px -6px;z-index:1;position:absolute;bottom:0;right:0;margin:0 5px 2px 0;cursor:pointer;}
+.btn span{display:block;width:25px;height:29px;font-size:0;position:absolute;top:50%;left:50%;margin-top:-12px;margin-left:-11px;overflow:hidden;background:url(../img/bg1-06-01.png) no-repeat;}
+.btn1 span{background-position:-171px -18px;}
+.btn2 span{background-position:-198px -18px;}
+.btn3 span{background-position:-225px -18px;}
+.btn4 span{background-position:-250px -19px;}
+.btn5 span{background-position:-220px -20px;}
+.btn{-webkit-transition:bottom .2s,right .2s;-moz-transition:bottom .2s,right .2s;-o-transition:bottom .2s,right .2s;-ms-transition:bottom .2s,right .2s;transition:bottom .2s,right .2s;}
+.btn1.close, .btn2.close, .btn3.close, .btn4.close{bottom:0;right:0;}
+.btn1.open{bottom:175px;right:0;}
+.btn2.open{bottom:150px;right:62px;}
+.btn3.open{bottom:105px;right:112px;}
+.btn4.open{bottom:40px;right:140px;}

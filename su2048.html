@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TJ2048</title>
+    <link rel="stylesheet" href="style/su2048.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+<img class="bg" src="img/su-02.png">
+<div id="stage">
+    <!--<div class="block"></div>-->
+</div>
+<div id="scoreBox">分数:<span id="score"></span></div>
+<div class="congrats">
+    <!--<h1>Congratulations!</h1>-->
+</div>
+
+<div class="wrap">
+    <div class="menu"><img class="icon_menu" src="img/logo2-03.png" /><span></span></div>
+    <div class="btn btn1" data-num="1"><a href="pages.html" target="_blank"><span>历史</span></a></div>
+    <div class="btn btn2" data-num="2"><a href="su2048.html" target="_blank"><span>樱花</span></a></div>
+    <div class="btn btn3" data-num="3"><a href="" target="_blank"><span>blank</span></a></div>
+    <div class="btn btn4" data-num="4"><a href="comments.html" target="_blank"><span>comments</span></a></div>
+</div>
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js"></script>
+<script src="js/block.js"></script>
+<script src="js/123.js"></script>
+<script src="js/su2048.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".menu").click(function(){
+            var span = $(this).find("span");
+            if(span.hasClass("open")){
+                span.removeClass("open").addClass("close");
+                $(".btn").removeClass("open").addClass("close");
+            }else{
+                span.removeClass("close").addClass("open");
+                $(".btn").removeClass("close").addClass("open");
+            }
+        });
+    });
+</script>
+<!--<script async="" src="//www.google-analytics.com/analytics.js"></script>-->
+
+</body>
+</html>

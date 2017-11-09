@@ -1,0 +1,80 @@
+body{
+    height: 100%;
+}
+
+.onWheel{
+    width: 100%;height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.graph{
+    position: absolute;
+    left: 0;
+    right:0;
+    top: 0;
+    width:100%;
+    height:100%;
+}
+.graph0{
+    background: url('../img/index-01.png') no-repeat center;
+    z-index: 1;
+    width: 250%;
+    height: 250%;
+    transform: translate(-27%,-20%);
+    clip-path: circle(100% at 50% 50%);
+}
+.graph1{
+    background:url('../img/1.jpg') no-repeat center;
+    background-color:#c3de5e;
+    z-index: 2;
+    clip-path: circle(0% at 50% 50%);
+}
+.graph2{
+    background:url('../img/2.jpg') no-repeat center;
+    background-color:#f5cc4c;
+    z-index: 3;
+    clip-path: circle(0% at 50% 50%);
+}
+.graph3{
+    background:url('../img/3.jpg') no-repeat center;
+    background-color:#59c5ff;
+    z-index: 4;
+    clip-path: circle(0% at 50% 50%);
+}
+.graph4{
+   background:url('../img/4.jpg') no-repeat center;
+    background-color:#5ccc8b;
+    z-index: 5;
+    clip-path: circle(0% at 50% 50%);
+}
+.graph5{
+    background:url('../img/5.jpg') no-repeat center;
+    background-color:#c1865d;
+    z-index: 6;
+    clip-path: circle(0% at 50% 50%);
+}
+.graph6{
+    background:url('../img/6.jpg') no-repeat center;
+    background-color:#9ccaca;
+    z-index: 7;
+    clip-path: circle(0% at 50% 50%);
+}
+
+.wrap{ width: 60px; height: 65px; position: absolute; left: 90%; top:80%; }
+.icon_menu{width:65px;height:65px;position:absolute;bottom:2px;right:2px;z-index:10;cursor:pointer;}
+.icon_menu span{diplay:none;}
+.btn{width:52px;height:57px;background:url(../img/bg1-06-01.png) no-repeat -78px -6px; z-index:1;position:absolute;bottom:0;right:0;margin:0 5px 2px 0;cursor:pointer;}
+.btn span{display:block;width:25px;height:29px;font-size:0;position:absolute;top:50%;left:50%;margin-top:-12px;margin-left:-11px;overflow:hidden;background:url(../img/bg1-06-01.png) no-repeat;}
+.btn1 span{background-position:-171px -18px;}
+.btn2 span{background-position:-198px -18px;}
+.btn3 span{background-position:-225px -18px;}
+.btn4 span{background-position:-250px -19px;}
+.btn5 span{background-position:-220px -20px;}
+.btn{-webkit-transition:bottom .2s,right .2s;-moz-transition:bottom .2s,right .2s;-o-transition:bottom .2s,right .2s;-ms-transition:bottom .2s,right .2s;transition:bottom .2s,right .2s;}
+.btn1.close, .btn2.close, .btn3.close, .btn4.close{bottom:0;right:0;}
+.btn1.open{bottom:175px;right:0;}
+.btn2.open{bottom:150px;right:62px;}
+.btn3.open{bottom:105px;right:112px;}
+.btn4.open{bottom:40px;right:140px;}

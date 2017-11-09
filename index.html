@@ -1,0 +1,46 @@
+<!--Created by luoxue on 17/5/15-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> TJ110</title>
+  <!--<link type="text/css" href="style.css">-->
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body style="overflow: hidden">
+<embed src="music/index.mp3" width="0" height="0"></embed>
+<div onwheel="OnScroll(event)" class="onWheel">
+  <!--<div> <img src="img/logo-05.png" style="position: absolute;left: 90%; top:80%;z-index: 8"> </div>-->
+  <div id="1" class="graph graph0"></div>
+  <img id="max" src="img/13.png" style="position:absolute;z-index: 100;left: 50%;top: 50%;transform: translate(-50%,-50%)">
+</div>
+</body>
+</html>
+
+
+
+<!--menu-->
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+
+<script type="text/javascript">
+  $(function () {
+    $(".menu").click(function () {
+      var span = $(this).find("span");
+      if (span.hasClass("open")) {
+        span.removeClass("open").addClass("close");
+        $(".btn").removeClass("open").addClass("close");
+      } else {
+        span.removeClass("close").addClass("open");
+        $(".btn").removeClass("close").addClass("open");
+      }
+    });
+  });
+</script>
+
+<script src="js/index.js"></script>
+
+
+

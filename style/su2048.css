@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+
+.bg{
+    position: absolute;
+    width: 100%;
+    height: 700px;
+}
+
+*{
+    padding:0px;
+    margin:0px;
+    font-family: "Microsoft YaHei","Microsoft YaHei UI Light",sans-serif;
+
+}
+#stage{
+    margin:10px auto;
+    width:700px;
+    height:420px;
+    padding:8px;
+
+}
+.block{
+    position: absolute;
+    width:100px;
+    height:100px;
+    line-height:100px;
+    text-align: center;
+    font-size: 40px;
+    -webkit-transition: margin-left 0.3s, margin-top 0.3s;
+    -moz-transition: margin-left 0.3s, margin-top 0.3s;
+    -ms-transition: margin-left 0.3s, margin-top 0.3s;
+    -o-transition: margin-left 0.3s, margin-top 0.3s;
+    transition: margin-left 0.3s, margin-top 0.3s;
+}
+#scoreBox{
+    width:400px;
+    padding:5px;
+    height:50px;
+    margin:30px auto;
+    font-size: 32px;
+    letter-spacing:1px;
+}
+#score{
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+.blob {
+    /*blackground: url("../img/f1-01.png");*/
+    height: 30px;
+    width: 30px;
+    color: pink;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    z-index: 1;
+    font-size: 30px;
+    display: none;
+}
+
+.wrap{ width: 60px; height: 65px; position: absolute; left: 93%; top:90%; }
+.icon_menu{width:65px;height:65px;position:absolute;bottom:2px;right:2px;z-index:10;cursor:pointer;}
+.icon_menu span{diplay:none;}
+.btn{width:52px;height:57px;background:url(../img/bg1-06-01.png) no-repeat -78px -6px;z-index:1;position:absolute;bottom:0;right:0;margin:0 5px 2px 0;cursor:pointer;}
+.btn span{display:block;width:25px;height:29px;font-size:0;position:absolute;top:50%;left:50%;margin-top:-12px;margin-left:-11px;overflow:hidden;background:url(../img/bg1-06-01.png) no-repeat;}
+.btn1 span{background-position:-171px -18px;}
+.btn2 span{background-position:-198px -18px;}
+.btn3 span{background-position:-225px -18px;}
+.btn4 span{background-position:-250px -19px;}
+.btn5 span{background-position:-220px -20px;}
+.btn{-webkit-transition:bottom .2s,right .2s;-moz-transition:bottom .2s,right .2s;-o-transition:bottom .2s,right .2s;-ms-transition:bottom .2s,right .2s;transition:bottom .2s,right .2s;}
+.btn1.close, .btn2.close, .btn3.close, .btn4.close{bottom:0;right:0;}
+.btn1.open{bottom:175px;right:0;}
+.btn2.open{bottom:150px;right:62px;}
+.btn3.open{bottom:105px;right:112px;}
+.btn4.open{bottom:40px;right:140px;}
